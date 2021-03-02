@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  height: 100%;
+  background-color: white;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Shippori Mincho";
+}
+header {
+  padding-top: 0px;
+  background-color: #ff4073;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+}
+
+.logo {
+  position: relative;
+  font-size: 3rem;
+  z-index: 100;
+  line-height: 80px;
+  font-weight: 600;
+  padding: 0 4rem;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.logo img {
+  border: 2px solid white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.line-transition::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ff4073;
+  transition: width 0.3s;
+  margin-top: -3.8px;
+}
+
+.line-transition:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  color: black;
+  height: 500px;
+  background-color: white;
+  top: -100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.nav {
+  position: fixed;
+}
+
+nav ul {
+  padding: 100px;
+  padding-left: 3rem;
+}
+
+nav ul li {
+  padding-left: 20px;
+  color: black;
+  margin: 50px 0;
+  line-height: 30px;
+  transition: 1s;
+}
+
+.checkbtn {
+  display: block;
+  font-size: 25px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 1.8rem;
+  transition: 1s;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ * ul {
+  top: 0;
+}
+
+#check:checked ~ .checkbtn {
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
+
+#check:checked ~ .ty {
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+@media (max-width: 710px) {
+  label.logo {
+    font-size: 2rem;
+    transition: 1s;
+  }
+  nav ul li a {
+    font-size: 1rem;
+    transition: 1s;
+  }
+}
+
+.top {
+  background-color: #ff4073;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 160px;
+}
+
+.info {
+  margin: 30px;
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.info h1 {
+  font-size: 3rem;
+}
+
+.info button {
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+}
+
+#vecs img {
+  top: 0;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+}
+
+.getIt {
+  margin: 10px;
+  font-size: 1.6rem;
+  background-color: #ff4073;
+  border-radius: 3px;
+  padding: 5px 40px;
+  border: 2px solid white;
+  color: white;
+  transition: color 0.2s ease-in, background-color 0.2s ease-out;
+}
+
+.getIt:hover {
+  transition: color 0.2s ease-out, background-color 0.2s ease-in;
+  background-color: white;
+  color: #ff4073;
+}
