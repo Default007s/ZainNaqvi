@@ -19,8 +19,25 @@ body {
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   margin: 0;
+  overflow-y: hidden;
   height: 100%;
   background-color: white;
+}
+
+#portfolio {
+  background-color: #ff4073;
+}
+
+#nav-port {
+  background-color: #fff;
+}
+
+#head-port {
+  background-color: #fff;
+}
+
+#portcheckbtn {
+  color: #ff4073;
 }
 
 p {
@@ -35,34 +52,35 @@ h5,
 h6 {
   font-family: "Shippori Mincho";
 }
+
 header {
-  padding-top: 0px;
   background-color: #ff4073;
+  height: 90px;
 }
 
 nav {
-  height: 80px;
   width: 100%;
+  background-color: #ff4073;
   position: fixed;
+}
+
+.container {
+  margin-top: 5px;
 }
 
 .logo {
   position: relative;
-  font-size: 3rem;
   z-index: 100;
-  line-height: 80px;
-  font-weight: 600;
-  padding: 0 4rem;
+  padding: 0 5rem;
   transition: 0.1s;
   cursor: pointer;
 }
 
 .logo img {
   border: 2px solid white;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  margin: 10px;
 }
 
 .line-transition::after {
@@ -81,37 +99,40 @@ nav {
 }
 
 ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
   color: black;
-  height: 500px;
   background-color: white;
-  top: -100%;
+  top: 90px;
+  left: -100%;
   text-align: center;
   transition: all 0.5s;
 }
 
-.nav {
-  position: fixed;
-}
-
-nav ul {
-  padding: 100px;
-  padding-left: 3rem;
-}
-
 nav ul li {
-  padding-left: 20px;
+  display: inline-block;
+  padding-left: 120px;
   color: black;
-  margin: 50px 0;
   line-height: 30px;
   transition: 1s;
 }
 
+nav ul li a {
+  font-size: 1.8rem;
+  transition: 1s;
+  color: #ff4073;
+}
+
+nav ul {
+  padding: 50px;
+}
+
 .checkbtn {
-  display: block;
   font-size: 25px;
   color: white;
   float: right;
@@ -121,30 +142,8 @@ nav ul li {
   transition: 0.5s;
 }
 
-nav ul li a {
-  color: black;
-  font-size: 1.8rem;
-  transition: 1s;
-}
-
 #check {
   display: none;
-}
-
-#check:checked ~ * ul {
-  top: 0;
-}
-
-#check:checked ~ .checkbtn {
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  transition: 0.5s;
-}
-
-#check:checked ~ .ty {
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  transition: 0.5s;
 }
 
 @media (max-width: 710px) {
@@ -158,18 +157,33 @@ nav ul li a {
   }
 }
 
+a:hover,
+a:active {
+  transition: 1s;
+}
+
+#check:checked ~ * ul {
+  left: 0;
+}
+
+#check:checked ~ .checkbtn {
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
+
 .top {
   background-color: #ff4073;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 160px;
+  padding-top: 145px;
 }
 
 .info {
   margin: 30px;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,17 +202,20 @@ nav ul li a {
 }
 
 #vecs img {
-  top: 0;
+  margin-top: 50px;
   width: 230px;
   height: 230px;
   border-radius: 50%;
+}
+
+.paint {
+  margin-top: -15px;
 }
 
 .getIt {
   margin: 10px;
   font-size: 1.6rem;
   background-color: #ff4073;
-  border-radius: 3px;
   padding: 5px 40px;
   border: 2px solid white;
   color: white;
@@ -209,4 +226,115 @@ nav ul li a {
   transition: color 0.2s ease-out, background-color 0.2s ease-in;
   background-color: white;
   color: #ff4073;
+}
+
+.Artworks {
+  padding-top: 200px;
+}
+
+.Artworks h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.carousel {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.carousel-cell img {
+  border: 2px solid white;
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.carousel-cell {
+  margin-right: 100px;
+  width: 35%;
+  height: 400px;
+  border-radius: 5px;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.btn {
+  padding: 8px 0;
+  font-size: 1.6rem;
+  background-color: #ff4073;
+  margin: 0 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: 2px solid white;
+  color: white;
+  transition: color 0.2s ease-in, background-color 0.2s ease-out;
+}
+
+.btn:hover {
+  transition: color 0.2s ease-out, background-color 0.2s ease-in;
+  background-color: white;
+  color: #ff4073;
+}
+
+.pink {
+  color: #ff4073;
+}
+
+.main-about {
+  text-align: center;
+  padding-top: 250px;
+}
+
+#tagline {
+  font-size: 4rem;
+}
+
+.fa-arrow-right {
+  font-size: 4rem;
+  margin: 40px;
+  color: #ff4073;
+}
+
+.main-about img {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.main-about div {
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #ff4073;
+  height: 100px;
+  width: 100%;
+}
+
+.footer {
+}
+
+.left-footer h1 {
+}
+
+.footer-right img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
 }
