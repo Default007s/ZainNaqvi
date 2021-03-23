@@ -319,22 +319,29 @@ a:active {
 }
 
 footer {
+  bottom: 0;
+  position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
   background-color: #ff4073;
   height: 100px;
   width: 100%;
 }
 
-.footer {
-}
-
-.left-footer h1 {
+.footer-left {
+  margin-left: 100px;
+  color: white;
+  font-size: 1.3rem;
 }
 
 .footer-right img {
   width: 50px;
+  color: white;
+  margin-right: 50px;
+  float: right;
   height: 50px;
   border-radius: 0;
 }
