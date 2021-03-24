@@ -146,17 +146,6 @@ nav ul {
   display: none;
 }
 
-@media (max-width: 710px) {
-  label.logo {
-    font-size: 2rem;
-    transition: 1s;
-  }
-  nav ul li a {
-    font-size: 1rem;
-    transition: 1s;
-  }
-}
-
 a:hover,
 a:active {
   transition: 1s;
@@ -192,7 +181,9 @@ a:active {
 }
 
 .info h1 {
+  transition: 1s;
   font-size: 3rem;
+  text-align: center;
 }
 
 .info button {
@@ -293,6 +284,10 @@ a:active {
 .main-about {
   text-align: center;
   padding-top: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #tagline {
@@ -332,6 +327,7 @@ footer {
 }
 
 .footer-left {
+  white-space: nowrap;
   margin-left: 100px;
   color: white;
   font-size: 1.3rem;
@@ -344,4 +340,132 @@ footer {
   float: right;
   height: 50px;
   border-radius: 0;
+}
+
+@media (max-width: 900px) {
+  .Artworks {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 800px) {
+  #home-body {
+    background-color: #ff4073;
+  }
+
+  .Artworks {
+    padding-top: 100px;
+  }
+
+  .carousel-cell {
+    height: 350px;
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  .main-about {
+    padding-top: 200px;
+  }
+}
+
+@media (max-width: 710px) {
+  label.logo {
+    font-size: 2rem;
+    transition: 1s;
+  }
+
+  .info h1 {
+    font-size: 2.5rem;
+    transition: 1s;
+  }
+
+  nav ul li a {
+    font-size: 1.5rem;
+    transition: 1s;
+  }
+
+  #tagline {
+    font-size: 3rem;
+  }
+
+  .logo {
+    padding: 0 2rem;
+  }
+
+  nav ul li {
+    padding-left: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    padding-left: 32px;
+  }
+
+  nav ul li a {
+    font-size: 1.1rem;
+    transition: 1s;
+  }
+
+  .info h1 {
+    font-size: 2rem;
+    transition: 1s;
+  }
+
+  nav ul {
+    padding-left: 20px;
+  }
+
+  .btn {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .main-about div {
+    margin: 60px;
+  }
+
+  .main-about img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  #tagline {
+    font-size: 1.5rem;
+  }
+
+  .footer-left {
+    margin-left: 30px;
+  }
+
+  .footer-right img {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-about img {
+    height: 130px;
+    margin-top: 50px;
+  }
+
+  .fa-arrow-right {
+    font-size: 3rem;
+    margin: 20px;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
+  .main-about div {
+    margin-top: 0;
+  }
+
+  .footer-left {
+    margin-left: 20px;
+  }
+
+  .footer-right img {
+    margin-right: 20px;
+  }
 }
